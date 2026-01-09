@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Marcu_Nastasiu_Coworking_Mobile.Pages.NotificationEditPage"
+             Title="Notification">
+
+    <VerticalStackLayout Padding="16" Spacing="10">
+
+        <Label Text="Reservation"/>
+        <Picker x:Name="ReservationPicker" ItemDisplayBinding="{Binding Title}"/>
+
+        <Label Text="Message"/>
+        <Entry x:Name="MessageEntry" Placeholder="e.g., Reminder: reservation starts soon"/>
+
+        <Label Text="Notify At"/>
+        <HorizontalStackLayout Spacing="10">
+            <DatePicker x:Name="NotifyDate"/>
+            <TimePicker x:Name="NotifyTime"/>
+        </HorizontalStackLayout>
+
+        <Label x:Name="ErrorLabel" TextColor="Tomato" IsVisible="False"/>
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Save" Clicked="OnSaveClicked"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

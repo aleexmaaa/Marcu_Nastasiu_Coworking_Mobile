@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Marcu_Nastasiu_Coworking_Mobile.Pages.ReservationEditPage"
+             Title="Reservation">
+
+    <VerticalStackLayout Padding="16" Spacing="10">
+
+        <Label Text="Title"/>
+        <Entry x:Name="TitleEntry" Placeholder="e.g., Meeting"/>
+
+        <Label Text="Start"/>
+        <HorizontalStackLayout Spacing="10">
+            <DatePicker x:Name="StartDate"/>
+            <TimePicker x:Name="StartTime"/>
+        </HorizontalStackLayout>
+
+        <Label Text="End"/>
+        <HorizontalStackLayout Spacing="10">
+            <DatePicker x:Name="EndDate"/>
+            <TimePicker x:Name="EndTime"/>
+        </HorizontalStackLayout>
+
+        <Label x:Name="ErrorLabel" TextColor="Tomato" IsVisible="False"/>
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Save" Clicked="OnSaveClicked"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
